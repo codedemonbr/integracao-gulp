@@ -1,0 +1,8 @@
+{
+  "name": "integracao-gulp",
+  "version": "1.0.0",
+  "description": "Este projeto faz parte do curso de typscript da Cod3r.",
+  "main": "index.js",
+  "author": "Thiago Henrique dos Santos",
+  "license": "MIT"
+}
