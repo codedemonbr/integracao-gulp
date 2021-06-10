@@ -3,6 +3,8 @@ const del = require("del");
 const browserify = require("browserify");
 const source = require("vinyl-source-stream");
 const tsify = require("tsify");
+const uglify = require("gulp-uglify");
+const rename = require("gulp-rename");
 
 function limparDist(cb) {
     return del(["dist"]);
@@ -23,4 +25,15 @@ function gerarJS(cb) {
         .pipe(dest("dist"));
 }
 
-exports.default = series(limparDist, parallel(copiarHTML, gerarJS));
+function gerarJSProducao() {
+    return src("dist/app.js")
+        .pipe(rename("app.min.js"))
+        .pipe(uglify())
+        .pipe(dest("dist"));
+}
+
+exports.default = series(
+    limparDist,
+    parallel(copiarHTML, gerarJS),
+    gerarJSProducao
+);
