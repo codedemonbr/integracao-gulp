@@ -6,14 +6,20 @@
   "author": "Thiago Henrique dos Santos",
   "license": "MIT",
   "scripts": {
+    "start": "live-server --open=dist/ ",
     "build": "gulp"
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.5",
     "browserify": "^17.0.0",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
+    "jquery": "^3.6.0",
     "tsify": "^5.0.4",
     "typescript": "^4.3.2",
     "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1"
   }
 }
