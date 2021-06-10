@@ -4,5 +4,16 @@
   "description": "Este projeto faz parte do curso de typscript da Cod3r.",
   "main": "index.js",
   "author": "Thiago Henrique dos Santos",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "gulp"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "tsify": "^5.0.4",
+    "typescript": "^4.3.2",
+    "vinyl-source-stream": "^2.0.0"
+  }
 }
